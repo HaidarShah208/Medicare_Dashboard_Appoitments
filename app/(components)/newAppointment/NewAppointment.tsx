@@ -120,7 +120,7 @@ function NewAppointment({ onClose }) {
                 </h3>
                 <Image
                   src={cross}
-                  alt="cross"
+                  alt="crosssss"
                   className="cursor-pointer"
                   onClick={handleCancel}
                 />
