@@ -5,7 +5,7 @@ import Header from './(components)/header/Header'
 import Sidebar from './(components)/sidebar/Sidebar'
 import Signup from './(auth)/signup/page'
 
-export default function page() {
+export default function Page() {
   const [sidebar, setSidebar] = useState<boolean>(true);  
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
 

@@ -21,7 +21,7 @@ export const postAppointment = createAsyncThunk(
       }
       const data = await response.data;
       return data;
-    } catch (error) {
+    } catch (error: any) {
       return rejectWithValue(error.message);
     }
   }
