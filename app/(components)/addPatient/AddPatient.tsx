@@ -18,6 +18,7 @@ function AddPatient() {
     diagnoses: "",
     notes: "",
     phoneNumber: "",
+    status:""
   });
 
   const handleChange = (e: any) => {
@@ -43,7 +44,7 @@ function AddPatient() {
   };
 
   const handleSubmit = async () => {
-    const { forename, surname, dob, sex, diagnoses, notes, phoneNumber } =
+    const { forename, surname, dob, sex, diagnoses, notes, phoneNumber,status } =
       formData;
     console.log("Form Data:", formData);
     const formattedDate = `${dob.getFullYear()}-${(dob.getMonth() + 1)
@@ -58,6 +59,7 @@ function AddPatient() {
       diagnoses,
       notes,
       phonenumber: phoneNumber,
+      status
     };
 
     try {
@@ -188,6 +190,20 @@ function AddPatient() {
               className="py-2 px-4 h-[44px] w-[415px] border rounded text-sm"
             />
           </div>
+          <div className="px-10 justify-between flex">
+            <p className="text-[18px]">Status</p>
+                <select
+                  className="statusDropDown"
+                  value={formData.status} 
+                  onChange={handleChange}
+                  name="status"
+                >
+                  <option value="">Select Status</option>
+                  <option value="Recovered">Recovered</option>
+                  <option value="Awaitingsurgery">Awaiting surgery</option>
+                  <option value="Ontreatment">On treatment</option>
+                </select>
+              </div>
         </div>
       </div>
     </div>

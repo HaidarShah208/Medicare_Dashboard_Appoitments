@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { deletePatients, fetchPatients } from "@/store/slices/getPatients";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import { COLORS, getStatusColor } from "@/app/constant/color/Color";
 
 const PatientsPerPage = 5;
 export default function PatientsTable() {
@@ -37,6 +38,7 @@ const fetchPatientsData = async (page:number) => {
   }
 };
 
+console.log("fetch patient",fetchPatientsData)
 
 
   const handleDelete = async (id: string) => {
@@ -103,8 +105,8 @@ const fetchPatientsData = async (page:number) => {
                         {patient.surname}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap  flex justify-center">
-                        <p className="bg-green-200 mt-3 w-[140px] h-[25px] rounded-t-3xl rounded-b-3xl text-[12px] text-center pt-1 text-[#27AE60]">
-                          Recovered
+                        <p className={`bg-${COLORS} mt-3 w-[140px] h-[25px] rounded-t-3xl rounded-b-3xl text-[12px] text-center pt-1 text-[#27AE60]`}>
+                          {patient.status}
                         </p>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-center">

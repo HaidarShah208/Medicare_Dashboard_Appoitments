@@ -5,10 +5,10 @@ import { NextRequest, NextResponse } from "next/server";
 // Create new patients
 export const POST = async (request: NextRequest) => {
     try {
-      const { forename, surname,  dob, sex, diagnoses, notes,phonenumber } =
+      const { forename, surname,  dob, sex, diagnoses, notes,phonenumber,status } =
         await request.json();
   
-      if (!forename || !surname || !dob || !sex || !diagnoses || !notes ||!phonenumber) {
+      if (!forename || !surname || !dob || !sex || !diagnoses || !notes ||!phonenumber ||!status) {
         return new NextResponse("Missing something", {
           status: 400,
         });
@@ -23,7 +23,8 @@ export const POST = async (request: NextRequest) => {
             sex,
             diagnoses,
             notes,
-            phonenumber
+            phonenumber,
+            status
           },
         });
   

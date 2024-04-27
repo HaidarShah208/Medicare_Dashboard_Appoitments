@@ -36,6 +36,7 @@ model PatientData {
   diagnoses   String
   notes       String
   phonenumber String
+  status      String?
 }
 
 model appointmentData {
