@@ -109,8 +109,11 @@ function GraphData() {
             ) : (
               <>
                 <div className="flex flex-col">
-                  <p className="text-[37px] pt-6 pb-2 font-bold">
-                    {patients.data ? patients.data.length : 0}
+                  <p className="text-[17px] pt-6 font-bold">
+                    Male {maleCount}
+                  </p>
+                  <p className="text-[17px] pt-6 font-bold">
+                  Female {femaleCount}
                   </p>
                 </div>
                 <DonutChart maleCount={maleCount} femaleCount={femaleCount} />

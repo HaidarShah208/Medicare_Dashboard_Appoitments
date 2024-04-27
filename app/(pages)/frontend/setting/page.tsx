@@ -1,3 +1,4 @@
+import EditProfileForm from "@/app/(components)/editProfileForm/EditProfileForm";
 import GetCurrentUser from "@/app/(components)/getCurrentUser/GetCurrentUser";
 import { DASHBOARD } from "@/app/constant/assets/allAssets";
 import Image from "next/image";
@@ -15,7 +16,7 @@ function Setting() {
      </div>
       <div className="h-[72px] w-[1100px] items-center bg-white flex flex-row justify-between px-7">
         <div className="">
-          <p className="">Setting</p>
+          <p className="border rounded-md bg-blue-700 text-white px-3 py-1">Your Profile</p>
         </div>
         <div className="flex">
           <Image src={DASHBOARD.Question} alt="question" />
@@ -26,6 +27,7 @@ function Setting() {
           <Link href={"/changePassword"}>change your password ?</Link>
         </p>
       </div>
+     <EditProfileForm/>
     </div>
   );
 }
