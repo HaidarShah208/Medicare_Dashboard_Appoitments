@@ -66,7 +66,6 @@ function AddPatient() {
       setLoading(true);
       await dispatch(addPatient(requestData) as any);
       toast.success("Patient added successfully");
-    //   router.push("/frontend/patients");
       setLoading(false);
     } catch (error) {
       toast.error("Error in adding patient");

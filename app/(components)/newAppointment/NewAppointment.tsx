@@ -257,7 +257,7 @@ function NewAppointment({ onClose }) {
                           handleChange("duration", duration.toString())
                         }
                       >
-                        {duration}'
+                        {duration}&apos;
                       </button>
                     ))}
                   </div>

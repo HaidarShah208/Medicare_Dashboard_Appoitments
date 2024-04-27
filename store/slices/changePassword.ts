@@ -4,7 +4,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 export const changePassword = createAsyncThunk<void, { email: string, oldPassword: string, newPassword: string }>(
   'changePassword',
   async (payload) => {
-    const response = await fetch("http://localhost:3000/api/changePassword", {
+    const response = await fetch("/api/changePassword", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
